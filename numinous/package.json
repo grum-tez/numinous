@@ -1,0 +1,24 @@
+{
+  "name": "numinous",
+  "version": "1.0.0",
+  "description": "Archetype testing utilities",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "test"
+  },
+  "keywords": [
+    "archetype",
+    "tezos"
+  ],
+  "author": "Grum",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@completium/archetype-ts-types": "^0.1.8",
+    "@completium/experiment-ts": "^0.1.13",
+    "bignumber.js": "^9.1.1"
+  }
+}
