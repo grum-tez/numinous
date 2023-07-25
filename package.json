@@ -1,6 +1,6 @@
 {
   "name": "numinous",
-  "version": "0.0.7",
+  "version": "0.0.",
   "description": "Archetype testing utilities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
