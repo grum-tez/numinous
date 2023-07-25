@@ -1,32 +1,25 @@
 {
   "name": "numinous",
-  "version": "0.0.4",
-  "type": "module",
-  "main": "./dist/my-lib.umd.cjs",
-  "module": "./dist/my-lib.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/my-lib.js",
-      "require": "./dist/my-lib.umd.cjs"
-    }
-  },
+  "version": "0.0.7",
+  "description": "Archetype testing utilities",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc",
+    "test": "test"
   },
-  "devDependencies": {
-    "@types/node": "^18.16.1",
-    "typescript": "^5.0.2",
-    "vite": "^4.3.2",
-    "vite-plugin-dts": "^2.3.0"
-  },
-  "files": [
-    "dist"
+  "keywords": [
+    "archetype",
+    "tezos"
   ],
+  "author": "Grum",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
   "dependencies": {
-    "@completium/archetype-ts-types": "^0.1.8",
-    "@completium/experiment-ts": "^0.1.13"
+    "@completium/archetype-ts-types": "latest",
+    "@completium/experiment-ts": "latest",
+    "bignumber.js": "^9.1.1"
   }
 }
