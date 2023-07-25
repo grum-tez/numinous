@@ -15,7 +15,10 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "uname -a",
+  "postCreateCommand": [
+    "sudo apt-get update",
+    "sudo apt-get install -y xdg-utils"
+  ],
 
   // Configure tool-specific properties.
   "customizations": {

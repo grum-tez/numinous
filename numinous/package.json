@@ -1,8 +1,9 @@
 {
   "name": "numinous",
-  "version": "1.0.0",
+  "version": "0.0.7",
   "description": "Archetype testing utilities",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "test"
@@ -17,8 +18,8 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
-    "@completium/archetype-ts-types": "^0.1.8",
-    "@completium/experiment-ts": "^0.1.13",
+    "@completium/archetype-ts-types": "latest",
+    "@completium/experiment-ts": "latest",
     "bignumber.js": "^9.1.1"
   }
 }
