@@ -45,18 +45,19 @@ interface CallMaker {
   delay_seconds: number
 }
 
-function tezBNtoString(input: BigNumber) {
+export function tezBNtoString(input: BigNumber) {
   if (input === new BigNumber(0)) return `0 tez`
   if (!input) throw Error(`tezBigNumberToString input is invalid.`)
   return `${input.dividedBy(1000000).toNumber()} tez`
 }
 
-function posify(num: BigNumber): BigNumber {
+export function posify(num: BigNumber): BigNumber {
   if (num.isNegative()) return num.negated()
   return num
 }
 
 function get_cost(
+  //This function is very very wrong
   storage_difference: number,
   gas_used: number,
   bytes_size: number
@@ -98,7 +99,7 @@ const make_call_get_delta = async (
   }
 }
 
-async function run_scenario_test(
+export async function run_scenario_test(
   // scenario_description: string,
   call_makers: CallMaker[],
   tpArray: Array<testParams>,
