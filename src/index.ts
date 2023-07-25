@@ -6,12 +6,12 @@ import {
 import { BigNumber } from 'bignumber.js'
 import { Tez, CallResult, Duration } from '@completium/archetype-ts-types'
 
-interface costObject {
+export interface costObject {
   call_name: string
   approximate_cost: BigNumber
 }
 
-interface testParams {
+export interface testParams {
   name: string
   description: string
   account: Account
@@ -35,7 +35,7 @@ interface testParams {
   // variable_after: any,
 }
 
-interface CallMaker {
+export interface CallMaker {
   name: string
   description: string
   as: Account
@@ -56,7 +56,7 @@ export function posify(num: BigNumber): BigNumber {
   return num
 }
 
-function get_cost(
+export function get_cost(
   //This function is very very wrong
   storage_difference: number,
   gas_used: number,
@@ -67,7 +67,7 @@ function get_cost(
   return new BigNumber(fees + burn).integerValue(BigNumber.ROUND_UP)
 }
 
-const handleDelayInput = (delay: number | Duration | string): number => {
+export const handleDelayInput = (delay: number | Duration | string): number => {
   let output = 0
   if (typeof delay == 'number') output = delay
   if (typeof delay == 'string') output = new Duration(delay).toSecond()
@@ -75,13 +75,13 @@ const handleDelayInput = (delay: number | Duration | string): number => {
   return output
 }
 
-interface MCGTout {
+export interface MCGTout {
   delta: BigNumber
   call_result: CallResult
 }
 
 // with_cost function provides the cost of a transaction
-const make_call_get_delta = async (
+export const make_call_get_delta = async (
   f: { (call_params: Parameters): Promise<CallResult> },
   call_params: Parameters
 ): Promise<MCGTout> => {
